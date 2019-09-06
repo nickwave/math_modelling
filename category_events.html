@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Maiorov</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    .section {
+      margin: 0 4em 0 4em;
+      display: flex;
+      justify-content: space-between;
+    }
+    .column > img {
+      height: 76vh;
+      object-fit: cover;
+    }
+    .column > img:hover {
+      cursor: pointer;
+    }
+    .flex-column {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: rgba(0, 0, 0, .5);
+    }
+    .navbar-brand {
+      margin-left: 2em;
+    }
+ 
+    .footer {
+      display: flex;
+      flex-direction: row;
+      margin-left: 3.5em;
+      margin-top: 1.75vh;
+      margin-bottom: 2vh;
+    }
+    .icon-wrapper {
+      height: 32px;
+      width: 32px;
+      margin-right: 1em;
+    }
+    .fab {
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: x-large;
+      color: #555;
+    }
+    a:hover {
+      color: initial;
+      color: rgba(0, 0, 0, .7);
+    }
+
+    .modal-dialog {
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-content {
+      width: initial;
+    }
+
+    .carousel-control-prev {
+      width: 500%;
+      left: -480%;
+    }
+
+    .carousel-control-next {
+      width: 500%;
+      right: -480%;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: calc((1/3) * 100%);
+      max-width: calc((1/3) * 100%);
+      padding: 10px 5px 10px 5px;
+    }
+
+    .column img {
+      margin-bottom: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    .carousel-item img {
+      height: 90vh;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .close {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+    }
+    @media screen and (max-width: 800px) {
+      #navbarNav {
+        text-align: center;
+        padding-right: 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <a class="navbar-brand" href="index.html">ALEKSANDR MAIOROV</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="portfolio.html">Портфолио</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="video.html">Видео</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main role="main" class="section">
+    <div class="row">
+      <div class="column">
+        <img src="category_events/1.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(0);">
+        <img src="category_events/4.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(3);">
+        <img src="category_events/7.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(6);">
+        <img src="category_events/10.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(9);">
+        <img src="category_events/13.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(12);">
+        <img src="category_events/16.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(15);">
+        <img src="category_events/19.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(18);">
+      </div>
+      <div class="column">
+        <img src="category_events/2.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(1);">
+        <img src="category_events/5.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(4);">
+        <img src="category_events/8.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(7);">
+        <img src="category_events/11.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(10);">
+        <img src="category_events/14.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(13);">
+        <img src="category_events/17.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(16);">
+        <img src="category_events/20.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(19);">
+      </div>
+      <div class="column">
+        <img src="category_events/3.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(2);">
+        <img src="category_events/6.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(5);">
+        <img src="category_events/9.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(8);">
+        <img src="category_events/12.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(11);">
+        <img src="category_events/15.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(14);">
+        <img src="category_events/18.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(17);">
+        <img src="category_events/21.jpg"
+          data-toggle="modal" data-target="#photoModal" onclick="changeModal(20);">
+      </div>
+    </div>
+  </main>
+    <footer class="footer">
+    <div class="icon-wrapper">
+      <a href="https://www.facebook.com/maiorphotografer" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+    </div>
+    <div>
+      <a href="https://www.instagram.com/maiorovphoto" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>  <!-- Modal -->
+  <div class="modal" id="photoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div style="height: 0px;">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="carouselControls" class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="category_events/1.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/2.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/3.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/4.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/5.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/6.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/7.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/8.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/9.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/10.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/11.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/12.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/13.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/14.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/15.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/16.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/17.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/18.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/19.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/20.jpg" class="d-block">
+            </div>
+            <div class="carousel-item">
+              <img src="category_events/21.jpg" class="d-block">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript">
+$('.carousel').carousel({interval: false});
+
+function changeModal(index) {
+  var carousel = document.getElementsByClassName('carousel-inner')[0];
+  for(var i = 0; i < carousel.children.length; i++) {
+    if (i === index) {
+      carousel.children[i].classList.add('active');
+    } else {
+      carousel.children[i].classList.remove('active');
+    }
+  }
+}
+</script>
+</html>

@@ -1,0 +1,44 @@
+body {
+
+  background-color: rgb(20,20,20);
+
+}
+
+
+a, h4, .fab, .fas {
+
+  color: #ddd !important;
+
+}
+
+a {
+  font-family: Raleway-Regular;
+  font-size: 20px;
+}
+h4 {
+  font-size: 20px;
+}
+@font-face {
+  font-family: Philosopher-Regular;
+  src: url(Philosopher-Regular.ttf);
+}
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(Raleway-Regular.ttf);
+}
+.navbar-brand {
+  font-family: Raleway-Regular;
+  font-size: 30px;
+}
+
+#navbarNav {
+  justify-content: center;
+  padding-right: 430px;
+}
+
+.footer {
+  flex-direction: row-reverse !important;
+}
+.fab {
+  margin-right: 1em;
+}
